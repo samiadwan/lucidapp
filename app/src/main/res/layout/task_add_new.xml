@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_task_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_color"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/toolbar_task_add_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="0dp"
+                android:fontFamily="@font/noto_sans_bold"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="16dp"
+                android:paddingTop="5dp"
+                android:paddingRight="4dp"
+                android:text="Add New Event"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_task_add"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_color"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/inputshape"
+            android:ems="10"
+            android:hint="Event Name"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="#CCCCCC" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#D2D2D2" />
+
+        <EditText
+            android:id="@+id/task_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/inputshape"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Event Date"
+            android:onClick="showStartDatePicker"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="#CCCCCC" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#D2D2D2" />
+
+        <EditText
+            android:id="@+id/task_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/inputshape"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Event Time"
+            android:onClick="showStartTimePicker"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="#CCCCCC" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#D2D2D2" />
+
+        <EditText
+            android:id="@+id/task_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/inputshape"
+            android:ems="10"
+            android:hint="Location"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="#CCCCCC" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#D2D2D2" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true">
+
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cancelshape"
+                android:textColor="#ffffff"
+                android:onClick="closeAddTask"
+                android:text="Cancel" />
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <Button
+                android:id="@+id/buttonok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shapebgl"
+                android:onClick="doneAddTask"
+                android:text="Add"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@id/button3" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

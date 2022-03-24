@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/actionbar_color</item>
+        <item name="colorPrimaryDark" tools:targetApi="23">#ffffff</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:navigationIcon">@android:color/black</item>
+    </style>
+
+    <style name="AppThemeToolBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- your app branding color for the app bar -->
+
+        <!-- darker variant for the status bar and contextual app bars -->
+
+        <!-- theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/actionbar_color</item>
+        <!-- make status bar icons dark -->
+        <item name="colorPrimaryDark" tools:targetApi="23">#ffffff</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:navigationIcon">@android:color/black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+</resources>
